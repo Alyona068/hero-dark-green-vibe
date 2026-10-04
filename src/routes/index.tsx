@@ -8,6 +8,10 @@ import {
   TrendingUp,
   ArrowRight,
   MessageSquare,
+  ArrowUpRight,
+  BookOpen,
+  Brain,
+  Rocket,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -34,8 +38,140 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Hero,
+  component: Landing,
 });
+
+function Landing() {
+  return (
+    <>
+      <Hero />
+      <Projects />
+    </>
+  );
+}
+
+const projects = [
+  {
+    icon: <BookOpen />,
+    name: "StudyFlow",
+    description:
+      "AI-платформа для персонализированного обучения. Подстраивает материалы и темп занятий под каждого ученика.",
+    tags: ["React", "OpenAI", "Tailwind", "Supabase"],
+  },
+  {
+    icon: <Brain />,
+    name: "НейроАналитик",
+    description:
+      "AI-сервис для анализа данных. Превращает сырые таблицы в понятные отчёты и выводы за минуту.",
+    tags: ["Next.js", "LLM", "D3.js", "PostgreSQL"],
+  },
+  {
+    icon: <Rocket />,
+    name: "LaunchPro",
+    description:
+      "Лендинг для продукта. Собран за один вечер через диалог с нейросетью и готов к конверсии.",
+    tags: ["React", "Vite", "Tailwind", "GSAP"],
+  },
+];
+
+function ProjectPreview({ icon }: { icon: React.ReactNode }) {
+  return (
+    <div className="relative aspect-[16/9] overflow-hidden border-b border-border">
+      <div className="absolute inset-0 hero-grid opacity-40" aria-hidden="true" />
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 90% at 50% 100%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 70%)",
+        }}
+      />
+      <div className="relative z-10 flex h-full flex-col">
+        <div className="flex shrink-0 items-center gap-1.5 border-b border-border/60 px-4 py-2.5">
+          <span className="size-2 rounded-full bg-primary/70 badge-glow" />
+          <span className="size-2 rounded-full bg-primary/40" />
+          <span className="size-2 rounded-full bg-primary/20" />
+        </div>
+        <div className="flex min-h-0 flex-1 items-center justify-center">
+          <span className="text-glow text-primary/90 [&_svg]:size-10 sm:[&_svg]:size-12">
+            {icon}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Projects() {
+  return (
+    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24">
+      <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 0%, color-mix(in oklab, var(--primary) 8%, transparent), transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-x-0 top-0 h-px"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(to right, transparent, color-mix(in oklab, var(--glow) 40%, transparent), transparent)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="mb-10 text-center sm:mb-14">
+          <h2 className="font-display uppercase leading-tight tracking-tight text-foreground text-3xl sm:text-4xl lg:text-5xl">
+            Избранные{" "}
+            <span className="text-primary text-glow">проекты</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground sm:text-base">
+            Продукты, собранные через диалог с нейросетями — от идеи до релиза.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+          {projects.map((project) => (
+            <article
+              key={project.name}
+              className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-200 hover:border-primary/40 hover:shadow-[0_0_36px_color-mix(in_oklab,var(--glow)_18%,transparent)]"
+            >
+              <ProjectPreview icon={project.icon} />
+
+              <div className="flex min-w-0 flex-1 flex-col gap-3 p-5 sm:p-6">
+                <div className="flex min-w-0 items-center justify-between gap-3">
+                  <h3 className="min-w-0 truncate font-display uppercase tracking-tight text-foreground text-lg">
+                    {project.name}
+                  </h3>
+                  <ArrowUpRight className="size-4 shrink-0 text-muted-foreground transition-colors duration-200 group-hover:text-primary" />
+                </div>
+
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
+
+                <ul className="mt-auto flex flex-wrap gap-2 pt-1">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-sm border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] uppercase tracking-wider text-primary/90"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function Badge({
   icon,
