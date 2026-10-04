@@ -104,7 +104,7 @@ function Hero() {
       />
       <Badge
         icon={<Network />}
-        position="left-[14%] top-[42%]"
+        position="left-[3%] top-[36%]"
         float="hero-float-delayed"
         delay="1.2s"
       />
@@ -125,7 +125,7 @@ function Hero() {
       />
       <Badge
         icon={<TrendingUp />}
-        position="right-[14%] top-[42%]"
+        position="right-[3%] top-[36%]"
         float="hero-float"
         delay="0.3s"
       />
