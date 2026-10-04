@@ -14,12 +14,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Создаю AI-продукты через вайбкодинг — Портфолио вайбкодера",
+        title: "Создаю AI-продукты через вайбкодинг",
       },
       {
         name: "description",
         content:
-          "Портфолио вайбкодера: создаю AI-продукты через вайбкодинг. Посмотрите проекты и свяжитесь со мной.",
+          "Создаю AI-продукты через вайбкодинг. Посмотрите проекты и свяжитесь со мной.",
       },
       {
         property: "og:title",
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Портфолио вайбкодера: AI-продукты, созданные через вайбкодинг. Проекты и контакты.",
+          "AI-продукты, созданные через вайбкодинг. Проекты и контакты.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -138,10 +138,6 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-20 mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)] gap-10 px-4 py-20 text-center sm:px-6">
-        <p className="font-sans text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground sm:text-sm">
-          Портфолио вайбкодера
-        </p>
-
         <h1 className="font-display uppercase leading-[1.02] tracking-tight text-foreground text-4xl sm:text-6xl lg:text-7xl xl:text-8xl">
           Создаю{" "}
           <span className="text-primary text-glow">AI-продукты</span>
