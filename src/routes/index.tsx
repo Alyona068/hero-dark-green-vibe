@@ -8,6 +8,10 @@ import {
   TrendingUp,
   ArrowRight,
   MessageSquare,
+  ArrowUpRight,
+  BookOpen,
+  Brain,
+  Rocket,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
