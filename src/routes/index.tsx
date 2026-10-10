@@ -51,6 +51,7 @@ function Landing() {
       <Hero />
       <Services />
       <Projects />
+      <Process />
     </>
   );
 }
@@ -404,6 +405,109 @@ function Services() {
             </article>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+const steps = [
+  {
+    title: "Погружаюсь в задачу",
+    description:
+      "Разбираюсь в цели, пользователях и ограничениях. Фиксируем, что именно должно получиться.",
+  },
+  {
+    title: "Создаю с ИИ",
+    description:
+      "Собираю прототип через диалог с нейросетью: интерфейс, логика, данные. Первая рабочая версия — уже через день.",
+  },
+  {
+    title: "Тестирую и улучшаю",
+    description:
+      "Проверяю на реальных сценариях и мобильных экранах. Правлю то, что мешает пользоваться.",
+  },
+  {
+    title: "Запускаю и масштабирую",
+    description:
+      "Вывожу в прод и слежу за метриками. Добавляю новые функции и интеграции по мере роста.",
+  },
+];
+
+function Process() {
+  return (
+    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24">
+      <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 0%, color-mix(in oklab, var(--primary) 8%, transparent), transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-x-0 top-0 h-px"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(to right, transparent, color-mix(in oklab, var(--glow) 40%, transparent), transparent)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="mb-12 text-center sm:mb-16">
+          <h2 className="font-display uppercase leading-tight tracking-tight text-foreground text-3xl sm:text-4xl lg:text-5xl">
+            Как я <span className="text-primary text-glow">работаю</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground sm:text-base">
+            Четыре шага от разговора о задаче до запущенного продукта.
+          </p>
+        </div>
+
+        <ol className="grid grid-cols-1 md:grid-cols-4 md:gap-6">
+          {steps.map((step, index) => {
+            const last = index === steps.length - 1;
+            return (
+              <li key={step.title} className="relative flex gap-4 md:block">
+                <div className="relative flex flex-col items-center md:items-start">
+                  <span className="relative z-10 grid size-12 shrink-0 place-items-center rounded-full border border-primary/40 bg-secondary/60 badge-glow font-display text-sm text-primary">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  {!last && (
+                    <span
+                      className="corridor w-px flex-1 opacity-80 md:hidden"
+                      aria-hidden="true"
+                    />
+                  )}
+                </div>
+
+                {!last && (
+                  <span
+                    className="absolute left-6 right-[-3rem] top-6 hidden h-px md:block"
+                    aria-hidden="true"
+                    style={{
+                      background:
+                        "linear-gradient(to right, color-mix(in oklab, var(--glow) 32%, transparent), color-mix(in oklab, var(--glow) 10%, transparent))",
+                    }}
+                  />
+                )}
+
+                <div
+                  className={`min-w-0 md:pt-6 ${
+                    last ? "md:pb-0" : "pb-10 md:pb-0 md:pr-6"
+                  }`}
+                >
+                  <h3 className="font-display uppercase leading-tight tracking-tight text-foreground text-base sm:text-lg">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {step.description}
+                  </p>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </section>
   );
