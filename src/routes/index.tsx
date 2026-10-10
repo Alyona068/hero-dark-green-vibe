@@ -12,6 +12,10 @@ import {
   BookOpen,
   Brain,
   Rocket,
+  Workflow,
+  Palette,
+  PlugZap,
+  Check,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -45,6 +49,7 @@ function Landing() {
   return (
     <>
       <Hero />
+      <Services />
       <Projects />
     </>
   );
@@ -301,6 +306,103 @@ function Hero() {
             Связаться
             <MessageSquare className="size-4" />
           </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const services = [
+  {
+    icon: <Rocket />,
+    title: "MVP за неделю",
+    description:
+      "Собираю рабочий продукт с нуля: от идеи до запущенного интерфейса. Без долгого согласования ТЗ — сразу видимая версия.",
+    result: "Рабочий продукт через 5–7 дней",
+  },
+  {
+    icon: <Workflow />,
+    title: "AI-автоматизация",
+    description:
+      "Подключаю нейросети к вашим процессам: документы, отчёты, переписка. Рутинные операции идут без ручного участия.",
+    result: "Минус 20 часов рутины в неделю",
+  },
+  {
+    icon: <Palette />,
+    title: "UI/UX с вайбкодингом",
+    description:
+      "Проектирую и сразу собираю интерфейс, а не картинку в макете. Правки появляются прямо в браузере за минуты.",
+    result: "Макет и рабочий экран в один день",
+  },
+  {
+    icon: <PlugZap />,
+    title: "Интеграции",
+    description:
+      "Связываю сервисы, платежи, CRM и AI-API в единый поток. Данные ходят между системами сами.",
+    result: "Связка сервисов за один день",
+  },
+];
+
+function Services() {
+  return (
+    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24">
+      <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 100%, color-mix(in oklab, var(--primary) 8%, transparent), transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-x-0 top-0 h-px"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(to right, transparent, color-mix(in oklab, var(--glow) 40%, transparent), transparent)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="mb-10 text-center sm:mb-14">
+          <h2 className="font-display uppercase leading-tight tracking-tight text-foreground text-3xl sm:text-4xl lg:text-5xl">
+            Что я <span className="text-primary text-glow">делаю</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground sm:text-base">
+            Четыре формата работы — от быстрого MVP до связки сервисов в один поток.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {services.map((service, index) => (
+            <article
+              key={service.title}
+              className="group flex flex-col rounded-lg border border-border bg-card p-5 transition-all duration-200 hover:border-primary/40 hover:shadow-[0_0_36px_color-mix(in_oklab,var(--glow)_18%,transparent)] sm:p-6"
+            >
+              <div className="mb-5 flex min-w-0 items-center justify-between gap-3">
+                <span className="grid size-12 shrink-0 place-items-center rounded-md border border-primary/40 bg-secondary/60 badge-glow text-primary/90 text-glow [&_svg]:size-6">
+                  {service.icon}
+                </span>
+                <span className="font-display shrink-0 text-xs uppercase tracking-widest text-primary/50">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <h3 className="font-display uppercase leading-tight tracking-tight text-foreground text-lg">
+                {service.title}
+              </h3>
+
+              <p className="mb-5 mt-3 text-sm leading-relaxed text-muted-foreground">
+                {service.description}
+              </p>
+
+              <p className="mt-auto flex items-start gap-2 border-t border-border pt-4 text-sm font-medium text-primary">
+                <Check className="mt-0.5 size-4 shrink-0" />
+                {service.result}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
