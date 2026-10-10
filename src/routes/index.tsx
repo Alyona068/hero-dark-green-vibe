@@ -153,7 +153,7 @@ function Projects() {
 
               <div className="flex min-w-0 flex-1 flex-col gap-3 p-5 sm:p-6">
                 <div className="flex min-w-0 items-center justify-between gap-3">
-                  <h3 className="min-w-0 truncate font-display uppercase tracking-tight text-foreground text-lg">
+                  <h3 className="min-w-0 truncate font-display tracking-tight text-foreground text-lg">
                     {project.name}
                   </h3>
                   <ArrowUpRight className="size-4 shrink-0 text-muted-foreground transition-colors duration-200 group-hover:text-primary" />
@@ -167,7 +167,7 @@ function Projects() {
                   {project.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="rounded-sm border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] uppercase tracking-wider text-primary/90"
+                      className="rounded-sm border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] tracking-wider text-primary/90"
                     >
                       {tag}
                     </li>
@@ -388,12 +388,12 @@ function Services() {
                 <span className="grid size-12 shrink-0 place-items-center rounded-md border border-primary/40 bg-secondary/60 badge-glow text-primary/90 text-glow [&_svg]:size-6">
                   {service.icon}
                 </span>
-                <span className="font-display shrink-0 text-xs uppercase tracking-widest text-primary/50">
+                <span className="font-display shrink-0 text-xs tracking-widest text-primary/50">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
 
-              <h3 className="font-display uppercase leading-tight tracking-tight text-foreground text-lg">
+              <h3 className="font-display leading-tight tracking-tight text-foreground text-lg">
                 {service.title}
               </h3>
 
@@ -500,7 +500,7 @@ function Process() {
                     last ? "md:pb-0" : "pb-10 md:pb-0 md:pr-6"
                   }`}
                 >
-                  <h3 className="font-display uppercase leading-tight tracking-tight text-foreground text-base sm:text-lg">
+                  <h3 className="font-display leading-tight tracking-tight text-foreground text-base sm:text-lg">
                     {step.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -572,7 +572,7 @@ function Cta() {
           </a>
           <a
             href={`mailto:${EMAIL_ADDRESS}`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary/40 bg-secondary/50 px-8 py-4 font-display text-xs uppercase tracking-widest text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary sm:w-auto sm:text-sm"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary/40 bg-secondary/50 px-8 py-4 font-display text-xs tracking-widest text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary sm:w-auto sm:text-sm"
           >
             Написать на Email
             <Mail className="size-4" />
