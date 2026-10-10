@@ -16,6 +16,8 @@ import {
   Palette,
   PlugZap,
   Check,
+  Send,
+  Mail,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -52,6 +54,7 @@ function Landing() {
       <Services />
       <Projects />
       <Process />
+      <Cta />
     </>
   );
 }
@@ -508,6 +511,73 @@ function Process() {
             );
           })}
         </ol>
+      </div>
+    </section>
+  );
+}
+
+const TELEGRAM_URL = "https://t.me/alypol_0_0";
+const EMAIL_ADDRESS = "aopolyakova89@gmail.com";
+
+function Cta() {
+  return (
+    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-28">
+      <div className="absolute inset-0 hero-grid opacity-30" aria-hidden="true" />
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 50%, color-mix(in oklab, var(--primary) 14%, transparent), transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-x-0 top-0 h-px"
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(to right, transparent, color-mix(in oklab, var(--glow) 40%, transparent), transparent)",
+        }}
+      />
+      <div
+        className="absolute inset-y-0 left-[12%] hidden w-px corridor lg:block"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-y-0 right-[12%] hidden w-px corridor lg:block"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
+        <span className="badge-glow text-glow mx-auto mb-8 grid size-16 place-items-center rounded-full border border-primary/40 bg-secondary/60 text-primary/90 [&_svg]:size-8">
+          <Send />
+        </span>
+
+        <h2 className="font-display uppercase leading-tight tracking-tight text-foreground text-3xl sm:text-4xl lg:text-5xl">
+          Обсудим <span className="text-primary text-glow">ваш проект</span>
+        </h2>
+        <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground sm:text-base">
+          Напишите удобным способом — отвечу и предложу формат работы.
+        </p>
+
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 font-display text-xs uppercase tracking-widest text-primary-foreground transition-all duration-200 hover:shadow-[0_0_32px_color-mix(in_oklab,var(--glow)_45%,transparent)] sm:w-auto sm:text-sm"
+          >
+            Написать в Telegram
+            <Send className="size-4" />
+          </a>
+          <a
+            href={`mailto:${EMAIL_ADDRESS}`}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary/40 bg-secondary/50 px-8 py-4 font-display text-xs uppercase tracking-widest text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary sm:w-auto sm:text-sm"
+          >
+            Написать на Email
+            <Mail className="size-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
