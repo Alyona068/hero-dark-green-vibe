@@ -51,8 +51,8 @@ function Landing() {
   return (
     <>
       <Hero />
-      <Services />
       <Projects />
+      <Services />
       <Process />
       <Cta />
     </>
