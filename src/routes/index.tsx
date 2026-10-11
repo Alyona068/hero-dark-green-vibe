@@ -412,7 +412,7 @@ function Services() {
   );
 }
 
-const steps = [
+const steps: { title: string; description: React.ReactNode }[] = [
   {
     title: "Погружаюсь в задачу",
     description:
@@ -420,8 +420,12 @@ const steps = [
   },
   {
     title: "Создаю с ИИ",
-    description:
-      "Собираю прототип через диалог с нейросетью: интерфейс, логика, данные. Первая рабочая версия — уже через день.",
+    description: (
+      <>
+        Собираю прототип через диалог с нейросетью: интерфейс, логика, данные.
+        Первая рабочая версия <span className="block sm:inline">уже через день.</span>
+      </>
+    ),
   },
   {
     title: "Тестирую и улучшаю",
