@@ -115,7 +115,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative scroll-mt-4 overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24"
+      className="relative scroll-mt-4 overflow-hidden bg-background px-4 pt-6 pb-6 sm:px-6 sm:pt-10 sm:pb-10"
     >
       <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
       <div
@@ -352,7 +352,7 @@ const services = [
 
 function Services() {
   return (
-    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24">
+    <section className="relative overflow-hidden bg-background px-4 pt-6 pb-6 sm:px-6 sm:pt-10 sm:pb-10">
       <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
       <div
         className="absolute inset-0"
@@ -441,7 +441,7 @@ const steps = [
 
 function Process() {
   return (
-    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24">
+    <section className="relative overflow-hidden bg-background px-4 pt-6 pb-6 sm:px-6 sm:pt-10 sm:pb-10">
       <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
       <div
         className="absolute inset-0"
@@ -526,7 +526,7 @@ function Cta() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-4 overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-28"
+      className="relative scroll-mt-4 overflow-hidden bg-background px-4 pt-6 pb-12 sm:px-6 sm:pt-10 sm:pb-20"
     >
       <div className="absolute inset-0 hero-grid opacity-30" aria-hidden="true" />
       <div
