@@ -113,7 +113,10 @@ function ProjectPreview({ icon }: { icon: React.ReactNode }) {
 
 function Projects() {
   return (
-    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24">
+    <section
+      id="projects"
+      className="relative scroll-mt-4 overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-24"
+    >
       <div className="absolute inset-0 hero-grid opacity-25" aria-hidden="true" />
       <div
         className="absolute inset-0"
@@ -296,20 +299,20 @@ function Hero() {
         </p>
 
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-          <button
-            type="button"
+          <a
+            href="#projects"
             className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 font-display text-xs tracking-widest text-primary-foreground transition-all duration-200 hover:shadow-[0_0_32px_color-mix(in_oklab,var(--glow)_45%,transparent)] sm:w-auto sm:text-sm"
           >
             Посмотреть проекты
             <ArrowRight className="size-4" />
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href="#contact"
             className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary/40 bg-secondary/50 px-8 py-4 font-display text-xs tracking-widest text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary sm:w-auto sm:text-sm"
           >
             Связаться
             <MessageSquare className="size-4" />
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -521,7 +524,10 @@ const EMAIL_ADDRESS = "aopolyakova89@gmail.com";
 
 function Cta() {
   return (
-    <section className="relative overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-28">
+    <section
+      id="contact"
+      className="relative scroll-mt-4 overflow-hidden bg-background px-4 py-20 sm:px-6 sm:py-28"
+    >
       <div className="absolute inset-0 hero-grid opacity-30" aria-hidden="true" />
       <div
         className="absolute inset-0"
