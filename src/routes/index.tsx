@@ -301,14 +301,14 @@ function Hero() {
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
           <a
             href="#projects"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 font-display text-xs tracking-widest text-primary-foreground transition-all duration-200 hover:shadow-[0_0_32px_color-mix(in_oklab,var(--glow)_45%,transparent)] sm:w-auto sm:text-sm"
+            className="inline-flex w-full min-w-[17rem] items-center justify-center gap-2 rounded-md border border-transparent bg-primary px-8 py-4 font-sans text-xs font-bold tracking-widest text-primary-foreground transition-all duration-200 hover:shadow-[0_0_32px_color-mix(in_oklab,var(--glow)_45%,transparent)] sm:w-auto sm:text-sm"
           >
             Посмотреть проекты
             <ArrowRight className="size-4" />
           </a>
           <a
             href="#contact"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary/40 bg-secondary/50 px-8 py-4 font-display text-xs tracking-widest text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary sm:w-auto sm:text-sm"
+            className="inline-flex w-full min-w-[17rem] items-center justify-center gap-2 rounded-md border border-primary/40 bg-secondary/50 px-8 py-4 font-sans text-xs font-bold tracking-widest text-foreground transition-colors duration-200 hover:bg-accent hover:text-primary sm:w-auto sm:text-sm"
           >
             Связаться
             <MessageSquare className="size-4" />
