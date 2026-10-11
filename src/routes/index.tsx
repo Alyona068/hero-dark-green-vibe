@@ -382,19 +382,15 @@ function Services() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <article
               key={service.title}
               className="group flex flex-col rounded-lg border border-border bg-card p-5 transition-all duration-200 hover:border-primary/40 hover:shadow-[0_0_36px_color-mix(in_oklab,var(--glow)_18%,transparent)] sm:p-6"
             >
-              <div className="mb-5 flex min-w-0 items-center justify-between gap-3">
-                <span className="grid size-12 shrink-0 place-items-center rounded-md border border-primary/40 bg-secondary/60 badge-glow text-primary/90 text-glow [&_svg]:size-6">
-                  {service.icon}
-                </span>
-                <span className="font-display shrink-0 text-xs tracking-widest text-primary/50">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
+              <span className="mb-5 grid size-12 shrink-0 place-items-center rounded-md border border-primary/40 bg-secondary/60 badge-glow text-primary/90 text-glow [&_svg]:size-6">
+                {service.icon}
+              </span>
+
 
               <h3 className="font-display leading-tight tracking-tight text-foreground text-lg">
                 {service.title}
