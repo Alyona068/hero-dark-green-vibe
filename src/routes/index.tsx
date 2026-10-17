@@ -162,11 +162,11 @@ function Projects() {
                   <ArrowUpRight className="size-4 shrink-0 text-muted-foreground transition-colors duration-200 group-hover:text-primary" />
                 </div>
 
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="min-h-[4.9em] text-sm leading-relaxed text-muted-foreground md:min-h-[9.75em] lg:min-h-[6.5em] xl:min-h-[4.9em]">
                   {project.description}
                 </p>
 
-                <ul className="mt-auto flex flex-wrap gap-2 pt-1">
+                <ul className="flex flex-wrap gap-2 pt-1">
                   {project.tags.map((tag) => (
                     <li
                       key={tag}
@@ -392,11 +392,11 @@ function Services() {
               </span>
 
 
-              <h3 className="font-display leading-tight tracking-tight text-foreground text-lg">
+              <h3 className="font-display leading-tight tracking-tight text-foreground text-lg lg:min-h-[2.5em] xl:min-h-[1.25em]">
                 {service.title}
               </h3>
 
-              <p className="mb-5 mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mb-5 mt-3 min-h-[4.9em] text-sm leading-relaxed text-muted-foreground sm:min-h-[6.5em] lg:min-h-[9.75em] xl:min-h-[8.125em]">
                 {service.description}
               </p>
 
