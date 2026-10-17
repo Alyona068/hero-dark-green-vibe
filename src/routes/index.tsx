@@ -396,7 +396,7 @@ function Services() {
                 {service.title}
               </h3>
 
-              <p className="mb-5 mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mb-5 mt-3 min-h-[4.9em] text-sm leading-relaxed text-muted-foreground sm:min-h-[6.5em] lg:min-h-[9.75em] xl:min-h-[8.125em]">
                 {service.description}
               </p>
 
