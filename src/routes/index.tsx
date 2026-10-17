@@ -392,7 +392,7 @@ function Services() {
               </span>
 
 
-              <h3 className="font-display leading-tight tracking-tight text-foreground text-lg">
+              <h3 className="font-display leading-tight tracking-tight text-foreground text-lg lg:min-h-[2.5em] xl:min-h-[1.25em]">
                 {service.title}
               </h3>
 
