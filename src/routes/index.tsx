@@ -400,7 +400,7 @@ function Services() {
                 {service.description}
               </p>
 
-              <p className="mt-auto flex items-start gap-2 border-t border-border pt-4 text-sm font-medium text-primary">
+              <p className="mt-5 flex items-start gap-2 border-t border-border pt-4 text-sm font-medium text-primary">
                 <Check className="mt-0.5 size-4 shrink-0" />
                 {service.result}
               </p>
